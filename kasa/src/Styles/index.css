@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  height: 1095px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  /* or 68px */
+}
+
+a {
+       text-decoration: none;
+      list-style-type: none;
+       cursor: pointer;
+}
+
+.logoDiv {
+  position: absolute;
+  left: 0%;
+  right: 83.04%;
+  top: 0%;
+  bottom: 0%;
+}
+.logo {
+  width: 210px;
+  height: 68px;
+}
+
+
+.header {
+  width: 1240px;
+  height: 68px;
+  left: 100px;
+  top: 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  left: 75.08%;
+  right: 0%;
+  top: 25%;
+  bottom: 25%;
+}
+  
+   .navbar li {
+      margin-right: 30px;
+      border: 3px solid transparent;
+      font-size: 24px;
+      line-height: 34px; 
+       color: #ff6060;
+    }
+  
+
+.navbar li a {
+  
+
+  padding-right: 20px;
+    }
+
+  .navbar li a:hover {
+    text-decoration: underline;
+  }
+
+
+
+.section1 {
+   display: flex;
+  
+  background-image: url(../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1240px;
+  height: 223px;
+
+  top: -573px;
+}
+
+.section1TextBgd {
+  width: 1240px;
+  height: 223px;
+  background: #000000;
+  mix-blend-mode: darken;
+  opacity: 0.3;
+  border-radius: 25px;
+  }
+
+  .textSection1 {
+ 
+    font-size: 48px;
+    line-height: 68.45px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .gallery {
+    height: 829px;
+width: 1240px;
+left: 100px;
+top: 437px;
+    font-size: 18px;
+  }
+
+
+
+
+.footerContent {
+position: absolute;
+  height: 209px;
+  width: 1440px;
+  top: 4333px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+}
+
+.texteFooter {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  position: absolute;
+  right: 32.22%;
+  left: 32.15%;
+  top: 64.11%;
+  bottom: 13.88%;
+  color: #ffffff;
+}
+
+.logoFooter {
+  position: absolute;
+  left: 45.76%;
+  right: 45.76%;
+  top: 31.58%;
+  bottom: 49.55%;
+  width: 122px;
+  height: 39.44px;
+  text-align: center;
+  color: #ffffff;
+  }
