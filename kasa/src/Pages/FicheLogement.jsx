@@ -14,14 +14,33 @@ export default function  FicheLogement () {
         <div className="FicheLogement">
           <img src={fiche.cover} alt="" className="coverPicture" />
           <img src={fiche.pictures} alt="" />
+
+          <div className='adressLogement'> 
           <h1 className="titleFicheLogement">{fiche?.title}</h1>
-          <p className="tagFicheLogement">{fiche.tags}</p>
-          <p className="descriptionFicheLogement">{fiche.description}</p>
+            <p className='txtLocationLogement'>{fiche.location}</p>
+          </div>
+
+          <div className='ownerLogement'> 
           <p>{fiche.host.name}</p>
           <img src={fiche.host.picture} alt="" className="hostPicture" />
+          </div>
+          
+          <div className='taggingLogement'>  
+          <p className="tagFicheLogement">{fiche.tags}</p>
+          </div>
+
+          <div className='evalLogement'> 
           <p>{fiche.rating}</p>
-          <p>{fiche.location}</p>
+          </div>
+
+          <div className='txtFicheLogement'> 
+          <p className="descriptionFicheLogement">{fiche.description}</p>
+          </div>
+
+          <div className='txtEquipementsLogement'> 
           <p>{fiche.equipments}</p>
+          </div>
+
         </div>
       </>
     );
