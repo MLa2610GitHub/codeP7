@@ -5,7 +5,7 @@ import logements from '../logements.json';
 /*avec la méthode map, on itére sur la liste de logements pour afficher les annonces */
 export default function List() {
   return (
-    <section className="gallery">
+    <section className="galleryList">
       {logements.map((logement) => {
         const title = logement.title.split(' ').join('-');
         /* Les méthodes split et join créent une url facile à lire */

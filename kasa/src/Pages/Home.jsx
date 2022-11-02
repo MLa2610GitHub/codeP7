@@ -1,11 +1,11 @@
 import React from 'react';
 import background from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png';
-import List from '../Components/List';
+import Card from '../Components/Card';
 import '../Styles/index.css';
 
 export default function Home() {
   return (
-    <body>
+    <>
       <section
         className="section1"
         style={{ backgroundImage: `url(${background})` }}
@@ -19,7 +19,7 @@ export default function Home() {
 
       
      </section>
-         <List />
-    </body>
+         <Card />
+    </>
   );
 }
