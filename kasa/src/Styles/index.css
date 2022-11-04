@@ -61,6 +61,8 @@ a {
   text-decoration: underline;
 }
 
+
+/* HOME PAGE */
 .section1 {
   display: flex;
 
@@ -130,9 +132,6 @@ a {
 }
 
 .cardTitle a {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
   font-size: 18px;
   line-height: 142.6%;
   /* or 26px */
@@ -141,19 +140,21 @@ a {
   color: #ffffff;
 }
 
-.FicheLogement {
+/* FICHE LOGEMENT */
+
+.fiche-logement {
   display: flex;
   flex-direction: column;
 }
 
-.FicheLogement .coverPicture {
+.fiche-logement .cover-picture {
   width: 1240px;
   height: 415px;
   border-radius: 25px;
   mix-blend-mode: normal;
 }
 
-.FicheLogement h1 {
+.fiche-logement h1 {
   left: 6.94%;
   right: 48.96%;
   top: 55.96%;
@@ -166,15 +167,12 @@ a {
   color: #ff6060;
 }
 
-.txtLocationLogement {
+.dropdown-fiche-logement-content {
   left: 6.94%;
   right: 80.83%;
   top: 60.94%;
   bottom: 36.52%;
   color: #ff6060;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
   font-size: 18px;
   line-height: 142.6%;
   /* identical to box height, or 26px */
@@ -183,12 +181,12 @@ a {
   align-items: flex-end;
 }
 
-.ownerLogement {
+.owner-logement {
   display: flex;
   justify-content: flex-end;
 }
 
-.FicheLogement .hostPicture {
+.fiche-logement .host-picture {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -197,17 +195,18 @@ a {
   background: #c4c4c4;
 }
 
-.taggingLogement {
+.tagging-logement {
   display: flex;
   flex-direction: row;
 }
 
-.tagFicheLogement {
+.tag-fiche-logement {
   width: 115px;
   height: 25px;
   left: 100px;
   top: 670px;
   background: #ff6060;
+  color: #ffffff;
   border-radius: 10px;
 }
 
@@ -220,13 +219,69 @@ a {
   background: #ff6060;
 }
 
-.txtFicheLogement {
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown-item {
   display: flex;
   flex-direction: column;
+  width: 582px;
+  height: 249px;
+  top: 42px;
+  background: #f7f7f7;
+  border-radius: 10px;
 }
-.descriptionFicheLogement {
+
+.dropdown-item-closed {
+  display: flex;
+  width: 582px;
+  height: 52px;
+  border-radius: 10px;
+  background: #ff6060;
+  border-radius: 10px;
+}
+
+.dropdown-item-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  background-color: #ff6060;
+  color: #ffffff;
+   }
+
+.dropdown-chevron {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.dropdown-item-content {
+  display: flex;
+  flex-direction: column;
   color: #ff6060;
 }
+
+/* PAGE ABOUT */
+
+.dropdown-about {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-item-about {
+  display: flex;
+  flex-direction: column;
+  width: 1023px;
+  height: 184px;
+  top: 842px;
+  left: 208px;
+  background: #f7f7f7;
+  border-radius: 5px;
+}
+
+/* FOOTER */
 
 .footerContent {
   position: absolute;
@@ -240,9 +295,6 @@ a {
 }
 
 .texteFooter {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
   font-size: 24px;
   line-height: 34px;
   text-align: center;
