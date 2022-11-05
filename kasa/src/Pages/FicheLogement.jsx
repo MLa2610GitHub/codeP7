@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Dropdown from '../Components/dropdown';
-import logements from '../logements.json';
+import Dropdown from '../Components/Dropdown';
 
+import logements from '../logements.json';
 
 export default function FicheLogement() {
   const params = useLocation();
@@ -28,8 +28,8 @@ export default function FicheLogement() {
           <p className="tag-fiche-logement">{fiche.tags} </p>
         </div>
 
-        <div className="eval-logement">
-          <p> {fiche.rating} </p>
+        <div className="rating">
+          <div className="eval-logement">{fiche.rating}</div>
         </div>
 
         <div className="dropdown">
@@ -42,10 +42,7 @@ export default function FicheLogement() {
           </div>
 
           <div className="dropdown-item">
-            <div className="dropdown-item-title">
-              Equipements
-                        
-            </div>
+            <div className="dropdown-item-title">Equipements</div>
 
             <div className="dropdown-item-content">
               <Dropdown equipments={fiche.equipments} />

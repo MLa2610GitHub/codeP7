@@ -17,9 +17,9 @@ export default function Home() {
 
      <section className='Gallery'>
 
-      
+        <Card />
      </section>
-         <Card />
+       
     </>
   );
 }

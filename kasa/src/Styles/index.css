@@ -61,7 +61,6 @@ a {
   text-decoration: underline;
 }
 
-
 /* HOME PAGE */
 .section1 {
   display: flex;
@@ -210,14 +209,11 @@ a {
   border-radius: 10px;
 }
 
-.fa-regular fa-star i {
-  position: absolute;
-  left: 8.33%;
-  right: 8.33%;
-  top: 8.33%;
-  bottom: 8.33%;
-  background: #ff6060;
+.eval-logement {
+  color: #ff6060;
 }
+
+
 
 .dropdown {
   display: flex;
@@ -246,13 +242,15 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
   cursor: pointer;
   background-color: #ff6060;
   color: #ffffff;
-   }
+}
 
 .dropdown-chevron {
   display: flex;
+  align-items: baseline;
   justify-content: flex-end;
   padding: 10px;
 }
@@ -265,9 +263,23 @@ a {
 
 /* PAGE ABOUT */
 
+.section1-about {
+  display: flex;
+  background-image: url(../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1240px;
+  height: 223px;
+  left: 100px;
+}
+
 .dropdown-about {
   display: flex;
   justify-content: center;
+  width: 1023px;
+  height: 1333px;
+
+  background: #ffffff;
 }
 
 .dropdown-item-about {

@@ -3,9 +3,11 @@ import '../Styles/index.css';
 
 const Logo = () => {
   return (
-    <div className="logoDiv">
-      <img className="logo" src={logo} alt="logo Kasa" />
-    </div>
+    <>
+      <div className="logoDiv">
+        <img className="logo" src={logo} alt="logo Kasa" />
+      </div>
+    </>
   );
 };
 

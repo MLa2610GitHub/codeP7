@@ -6,6 +6,7 @@ function Footer() {
   const texteFooter = '© 2020 Kasa. All rights reserved';
 
   return (
+    <>
     <div className="footerContent">
       <img src={logo} alt="Kasa" className="logoFooter" />
 
@@ -13,6 +14,7 @@ function Footer() {
         <p className="texteFooter">{texteFooter}</p>
       </div>
     </div>
+    </>
   );
 }
 

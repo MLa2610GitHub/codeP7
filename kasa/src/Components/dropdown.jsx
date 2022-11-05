@@ -8,6 +8,8 @@ function Dropdown({ description, equipments }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+
+    <>
     <div className="dropdown">
       <div className="dropdown-item">
         <div className="dropdown-item-title" onClick={() => setIsOpen(!isOpen)}>
@@ -20,8 +22,10 @@ function Dropdown({ description, equipments }) {
             {description} {equipments}
           </div>
         )}
+       
       </div>
     </div>
+     </>
   );
 }
 
