@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.png';
+import Logo from './Logo';
 import '../Styles/index.css';
 
 function Footer() {
@@ -7,13 +7,17 @@ function Footer() {
 
   return (
     <>
-    <div className="footerContent">
-      <img src={logo} alt="Kasa" className="logoFooter" />
+    <footer>
+      <div className="footerContent">
+        <div className="logoDivFooter">
+          <Logo fill="#FFFFFF" />
+        </div>
 
-      <div className="textFooter">
-        <p className="texteFooter">{texteFooter}</p>
+        <div className="textFooter">
+          <p className="texteFooter">{texteFooter}</p>
+        </div>
       </div>
-    </div>
+      </footer>
     </>
   );
 }

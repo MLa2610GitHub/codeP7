@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logements from '../logements.json';
+import '../Styles/index.css';
 
 /*avec la méthode map, on itére sur la liste de logements pour afficher les annonces */
 export default function List() {
@@ -29,7 +30,8 @@ export default function List() {
               <div>{logement.tags}</div>
               <div>{logement.rating}</div>
               <div>{logement.description}</div>
-              <div>{logement.equipments}</div>
+              <ul className='listEquipments'><li>{logement.equipments}</li>
+              </ul>
             </article>
           );
         })}

@@ -9,6 +9,8 @@ export default function FicheLogement() {
   const fiche = logements.find((fiche) => fiche.id === params?.state?.id);
 
   return (
+
+    
     <>
       <div className="fiche-logement">
         <img src={fiche.cover} alt="" className="cover-picture" />
@@ -34,7 +36,10 @@ export default function FicheLogement() {
 
         <div className="dropdown">
           <div className="dropdown-item">
-            <div className="dropdown-item-title">Description</div>
+            <div className="dropdown-item-title">
+             Description 
+               <div className="dropdown-chevron"></div>
+            </div>
 
             <div className="dropdown-item-content">
               <Dropdown description={fiche.description} />
@@ -42,10 +47,12 @@ export default function FicheLogement() {
           </div>
 
           <div className="dropdown-item">
-            <div className="dropdown-item-title">Equipements</div>
+            <div className="dropdown-item-title">
+              Equipements <div className="dropdown-chevron"></div>
+            </div>
 
             <div className="dropdown-item-content">
-              <Dropdown equipments={fiche.equipments} />
+              <Dropdown  equipments={fiche.equipments} />
             </div>
           </div>
         </div>

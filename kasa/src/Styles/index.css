@@ -17,23 +17,24 @@ a {
   cursor: pointer;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 1240px;
+  height: 68px;
+  left: 100px;
+  top: 40px;
+}
+
 .logoDiv {
-  position: absolute;
   left: 0%;
   right: 83.04%;
   top: 0%;
   bottom: 0%;
 }
-.logo {
+.logoDiv svg {
   width: 210px;
   height: 68px;
-}
-
-.header {
-  width: 1240px;
-  height: 68px;
-  left: 100px;
-  top: 40px;
 }
 
 .navbar {
@@ -62,16 +63,16 @@ a {
 }
 
 /* HOME PAGE */
-.section1 {
+.section1Home {
   display: flex;
-
   background-image: url(../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 1240px;
-  height: 223px;
+}
 
-  top: -573px;
+.section1Home img {
+  width: 1278px;
+  height: 223px;
 }
 
 .section1TextBgd {
@@ -93,12 +94,6 @@ a {
 .gallery {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  height: 829px;
-  width: 1240px;
-  left: 100px;
-  top: 437px;
 }
 
 .cardGallery {
@@ -106,13 +101,6 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 10px;
-}
-
-.cardGallery .card {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .cardGallery a {
@@ -144,9 +132,14 @@ a {
 .fiche-logement {
   display: flex;
   flex-direction: column;
+   width: 1240px;
+
 }
 
 .fiche-logement .cover-picture {
+  display: flex;
+  text-align: center;
+  align-self: center;
   width: 1240px;
   height: 415px;
   border-radius: 25px;
@@ -166,20 +159,6 @@ a {
   color: #ff6060;
 }
 
-.dropdown-fiche-logement-content {
-  left: 6.94%;
-  right: 80.83%;
-  top: 60.94%;
-  bottom: 36.52%;
-  color: #ff6060;
-  font-size: 18px;
-  line-height: 142.6%;
-  /* identical to box height, or 26px */
-
-  display: flex;
-  align-items: flex-end;
-}
-
 .owner-logement {
   display: flex;
   justify-content: flex-end;
@@ -189,7 +168,7 @@ a {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  left: 1273px;
+  left: 1240px;
   top: 567px;
   background: #c4c4c4;
 }
@@ -207,13 +186,12 @@ a {
   background: #ff6060;
   color: #ffffff;
   border-radius: 10px;
+  font-size: 14px;
 }
 
 .eval-logement {
   color: #ff6060;
 }
-
-
 
 .dropdown {
   display: flex;
@@ -229,30 +207,27 @@ a {
   border-radius: 10px;
 }
 
-.dropdown-item-closed {
-  display: flex;
-  width: 582px;
-  height: 52px;
-  border-radius: 10px;
-  background: #ff6060;
-  border-radius: 10px;
-}
-
 .dropdown-item-title {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
+  font-size: 18px;
   cursor: pointer;
   background-color: #ff6060;
   color: #ffffff;
+  left: 3.44%;
+  right: 78.35%;
+  top: 25%;
+  bottom: 25%;
 }
 
 .dropdown-chevron {
   display: flex;
-  align-items: baseline;
   justify-content: flex-end;
-  padding: 10px;
+  left: 98.45%;
+  right: -3.95%;
+  top: 19.23%;
+  bottom: 19.23%;
 }
 
 .dropdown-item-content {
@@ -261,6 +236,8 @@ a {
   color: #ff6060;
 }
 
+/* COMPONENT LIST */
+
 /* PAGE ABOUT */
 
 .section1-about {
@@ -268,7 +245,7 @@ a {
   background-image: url(../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.png);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 1240px;
+   width: 1240px;
   height: 223px;
   left: 100px;
 }
@@ -276,7 +253,6 @@ a {
 .dropdown-about {
   display: flex;
   justify-content: center;
-  width: 1023px;
   height: 1333px;
 
   background: #ffffff;
@@ -284,7 +260,7 @@ a {
 
 .dropdown-item-about {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   width: 1023px;
   height: 184px;
   top: 842px;
@@ -293,39 +269,48 @@ a {
   border-radius: 5px;
 }
 
+.rectangle-about {
+  height: 47px;
+  width: 1023px;
+  left: 0px;
+  top: 0px;
+  border-radius: 5px;
+}
+
 /* FOOTER */
 
+footer {
+  display: flex;
+  top: 4333px;
+   width: 1240px;
+}
+
 .footerContent {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 209px;
   width: 1440px;
-  top: 4333px;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-color: #000000;
 }
 
-.texteFooter {
-  font-size: 24px;
-  line-height: 34px;
-  text-align: center;
-  position: absolute;
-  right: 32.22%;
-  left: 32.15%;
-  top: 64.11%;
-  bottom: 13.88%;
-  color: #ffffff;
-}
-
-.logoFooter {
-  position: absolute;
-  left: 45.76%;
-  right: 45.76%;
-  top: 31.58%;
-  bottom: 49.55%;
+.logoDivFooter {
+  display: flex;
+  align-self: center;
+  align-items: center;
   width: 122px;
   height: 39.44px;
   text-align: center;
+  color: #ffffff;
+}
+
+.textFooter {
+  font-size: 24px;
+  line-height: 34px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  top: 64.11%;
+  bottom: 13.88%;
   color: #ffffff;
 }

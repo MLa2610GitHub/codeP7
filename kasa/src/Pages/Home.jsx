@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <section
-        className="section1"
+        className="section1Home"
         style={{ backgroundImage: `url(${background})` }}
       >
         <div className="section1TextBgd">
@@ -15,11 +15,9 @@ export default function Home() {
         </div>
       </section>
 
-     <section className='Gallery'>
-
+      <section className="gallery">
         <Card />
-     </section>
-       
+      </section>
     </>
   );
 }

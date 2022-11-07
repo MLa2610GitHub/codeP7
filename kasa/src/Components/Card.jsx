@@ -12,15 +12,20 @@ export default function Card() {
               const title = logement.title;
 
               return (
-                <div className="card">
-                  <div key={logement.id}>
-                        <h2 className="cardTitle">
-                            <Link to={`/fiche/${title} `} state={{ id: logement.id }}>
-                            {logement.title}
-                            </Link>
-                        </h2>
+            
+                  <div className="card">
+                    <div key={logement.id}>
+                      <h2 className="cardTitle">
+                        <Link
+                          to={`/fiche/${title} `}
+                          state={{ id: logement.id }}
+                        >
+                          {logement.title}
+                        </Link>
+                      </h2>
+                    </div>
                   </div>
-                </div>
+                
               );
             })}
             ;

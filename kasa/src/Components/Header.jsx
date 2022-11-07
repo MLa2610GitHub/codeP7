@@ -6,9 +6,10 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <nav className="navbar">
+        <div className="logoDiv">
           <Logo />
-
+        </div>
+        <nav className="navbar">
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? 'link active' : 'link')}
