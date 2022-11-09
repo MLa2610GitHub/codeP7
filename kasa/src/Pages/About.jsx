@@ -15,10 +15,23 @@ export default function About() {
         <div className="dropdown-about">
           <div className="dropdown-item-about">
             <div className="rectangle-about">
-
-               <Dropdown />
+              <Dropdown />
             </div>
-           
+          </div>
+          <div className="dropdown-item-about">
+            <div className="rectangle-about">
+              <Dropdown />
+            </div>
+          </div>
+          <div className="dropdown-item-about">
+            <div className="rectangle-about">
+              <Dropdown />
+            </div>
+          </div>
+          <div className="dropdown-item-about">
+            <div className="rectangle-about">
+              <Dropdown />
+            </div>
           </div>
         </div>
       </section>

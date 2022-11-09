@@ -4,7 +4,7 @@ import '../Styles/index.css';
 const Logo = () => {
   return (
     <>
-      <div className="logoDiv">
+      <div className="logo-div">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 211 68"

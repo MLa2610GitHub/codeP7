@@ -26,13 +26,13 @@ a {
   top: 40px;
 }
 
-.logoDiv {
+.logo-div {
   left: 0%;
   right: 83.04%;
   top: 0%;
   bottom: 0%;
 }
-.logoDiv svg {
+.logo-div svg {
   width: 210px;
   height: 68px;
 }
@@ -63,19 +63,20 @@ a {
 }
 
 /* HOME PAGE */
-.section1Home {
+
+.home-section1 {
   display: flex;
   background-image: url(../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.section1Home img {
+.home-section1 img {
   width: 1278px;
   height: 223px;
 }
 
-.section1TextBgd {
+.home-section1-text-bgd {
   width: 1240px;
   height: 223px;
   background: #000000;
@@ -84,7 +85,7 @@ a {
   border-radius: 25px;
 }
 
-.textSection1 {
+.home-section1-text {
   font-size: 48px;
   line-height: 68.45px;
   color: #ffffff;
@@ -94,46 +95,51 @@ a {
 .gallery {
   display: flex;
   flex-direction: row;
+  align-content: space-between;
+    padding: 10px;
 }
 
-.cardGallery {
+.gallery-card {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 10px;
+  
+  
 }
 
-.cardGallery a {
+.gallery-card a {
   display: flex;
   flex-wrap: wrap;
   height: 340px;
   width: 340px;
   left: 55px;
   border-radius: 10px;
-  background-color: #ff6060;
-  background-color: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-}
-
-.cardTitle a {
-  font-size: 18px;
-  line-height: 142.6%;
+  font-size: 26px;
   /* or 26px */
-  display: flex;
   align-items: flex-end;
   color: #ffffff;
+    padding: 10px;
 }
+
+.cover-img {
+width: 340px;
+height: 340px;
+border-radius: 10px;
+object-fit: cover;
+object-position: center;
+border-radius: 10px;
+object-fit: cover;
+object-position: center;
+}
+
 
 /* FICHE LOGEMENT */
 
 .fiche-logement {
   display: flex;
   flex-direction: column;
-   width: 1240px;
-
+  width: 1240px;
 }
 
 .fiche-logement .cover-picture {
@@ -159,12 +165,12 @@ a {
   color: #ff6060;
 }
 
-.owner-logement {
+.fiche-logement-owner {
   display: flex;
   justify-content: flex-end;
 }
 
-.fiche-logement .host-picture {
+.fiche-logement-owner .fiche-logement-host-picture {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -173,12 +179,12 @@ a {
   background: #c4c4c4;
 }
 
-.tagging-logement {
+.fiche-logement-tagging {
   display: flex;
   flex-direction: row;
 }
 
-.tag-fiche-logement {
+.fiche-logement-tag {
   width: 115px;
   height: 25px;
   left: 100px;
@@ -189,7 +195,7 @@ a {
   font-size: 14px;
 }
 
-.eval-logement {
+.fiche-logement-eval {
   color: #ff6060;
 }
 
@@ -245,13 +251,14 @@ a {
   background-image: url(../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.png);
   background-size: cover;
   background-repeat: no-repeat;
-   width: 1240px;
+  width: 1240px;
   height: 223px;
   left: 100px;
 }
 
 .dropdown-about {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   height: 1333px;
 
@@ -265,7 +272,7 @@ a {
   height: 184px;
   top: 842px;
   left: 208px;
-  background: #f7f7f7;
+  color: #ff6060;
   border-radius: 5px;
 }
 
@@ -275,6 +282,7 @@ a {
   left: 0px;
   top: 0px;
   border-radius: 5px;
+  color: #ff6060;
 }
 
 /* FOOTER */
@@ -282,7 +290,7 @@ a {
 footer {
   display: flex;
   top: 4333px;
-   width: 1240px;
+  width: 1240px;
 }
 
 .footerContent {
