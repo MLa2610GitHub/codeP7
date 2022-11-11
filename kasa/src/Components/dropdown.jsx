@@ -3,6 +3,7 @@ import { useState } from 'react';
 import '../Styles/index.css';
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
 
+
 function Dropdown({ description, equipments }) {
   const [isOpen, setIsOpen] = useState(false);
 

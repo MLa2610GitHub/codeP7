@@ -1,8 +1,6 @@
 import React from 'react';
 import background from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png';
-
 import Card from '../Components/Card';
-
 import '../Styles/index.css';
 
 export default function Home() {

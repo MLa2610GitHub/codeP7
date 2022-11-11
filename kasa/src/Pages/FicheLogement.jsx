@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Dropdown from '../Components/Dropdown';
 import logements from '../logements.json';
+import '../Styles/index.css';
 
 export default function FicheLogement() {
   const params = useLocation();
