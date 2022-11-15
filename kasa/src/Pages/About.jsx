@@ -2,6 +2,7 @@ import React from 'react';
 import background from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.png';
 import '../Styles/index.css';
 import Dropdown from '../Components/Dropdown';
+import textAbout from '../textAbout.json';
 
 export default function About() {
   return (
@@ -13,26 +14,18 @@ export default function About() {
 
       <section>
         <div className="dropdown-about">
-          <div className="dropdown-item-about">
-            <div className="rectangle-about">
-              <Dropdown />
-            </div>
-          </div>
-          <div className="dropdown-item-about">
-            <div className="rectangle-about">
-              <Dropdown />
-            </div>
-          </div>
-          <div className="dropdown-item-about">
-            <div className="rectangle-about">
-              <Dropdown />
-            </div>
-          </div>
-          <div className="dropdown-item-about">
-            <div className="rectangle-about">
-              <Dropdown />
-            </div>
-          </div>
+          {textAbout.map((textAbout) => {
+            return (
+              <div className="dropdown-item-about">
+                <div className="rectangle-about">
+                  <Dropdown
+                    title={textAbout.title}
+                    description={textAbout.description}
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </>

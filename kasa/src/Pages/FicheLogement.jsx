@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Dropdown from '../Components/Dropdown';
+import Tags from '../Components/Tags';
 import logements from '../logements.json';
 import '../Styles/index.css';
 
@@ -10,55 +11,54 @@ export default function FicheLogement() {
 
   return (
     <>
-      <div className="fiche-logement">
-        <img src={fiche.cover} alt="" className="cover-picture" />
-        <img src={fiche.pictures} alt="" />
+      <main>
+        <div className="fiche-logement">
+          <div className="carrousel-logement">
+            <img src={fiche.cover} alt="" className="cover-picture" />
+            <img src={fiche.pictures} alt="" />
+          </div>
 
-        <div className="adress-logement">
-          <h1 className="title-fiche-logement">{fiche?.title}</h1>
-          <p className="txt-location-logement">{fiche.location}</p>
-        </div>
+          <div className="data-logement">
+            <div className="adress-logement">
+              <div className="localisation-logement">
+                <h1 className="title-fiche-logement">{fiche?.title}</h1>
+                <p className="txt-location-logement">{fiche.location}</p>
+              </div>
 
-        <div className="fiche-logement-owner">
-          <p>{fiche.host.name}</p>
-          <img
-            src={fiche.host.picture}
-            alt=""
-            className="fiche-logement-host-picture"
-          />
-        </div>
-
-        <div className="tagging-logement">
-          <p className="tag-fiche-logement">{fiche.tags} </p>
-        </div>
-
-        <div className="rating">
-          <div className="eval-logement">{fiche.rating}</div>
-        </div>
-
-        <div className="dropdown">
-          <div className="dropdown-item">
-            <div className="dropdown-item-title">
-              Description
-              <div className="dropdown-chevron"></div>
+              <div className="tagging-logement">
+                <Tags tags={fiche.tags} />
+              </div>
             </div>
 
-            <div className="dropdown-item-content">
-              <Dropdown description={fiche.description} />
+            <div className="data-owner-logement">
+              <div className="fiche-owner">
+                <div className="details-owner">
+                  <p>{fiche.host.name}</p>
+                  <img
+                    src={fiche.host.picture}
+                    alt=""
+                    className="fiche-logement-host-picture"
+                  />
+                </div>
+              </div>
+
+              <div className="rating">
+                <span className="eval-logement">{fiche.rating}</span>
+              </div>
             </div>
           </div>
 
-          <div className="dropdown-item">
-            <div className="dropdown-item-title">
-              Equipements <div className="dropdown-chevron"></div>
+          <div className="dropdown-logement">
+            <div className="dropdown-item-content-description">
+              <Dropdown description={fiche.description} title={'Description'} />
             </div>
 
-            <div className="dropdown-item-content">
-              <Dropdown equipments={fiche.equipments} />
+            <div className="dropdown-item-content-equipments">
+              <Dropdown title={'Equipements'} equipments={fiche.equipments} />
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }
