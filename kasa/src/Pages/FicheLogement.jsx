@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import Carrousel from '../Components/Carrousel';
 import Dropdown from '../Components/Dropdown';
 import Tags from '../Components/Tags';
 import logements from '../logements.json';
@@ -14,8 +15,7 @@ export default function FicheLogement() {
       <main>
         <div className="fiche-logement">
           <div className="carrousel-logement">
-            <img src={fiche.cover} alt="" className="cover-picture" />
-            <img src={fiche.pictures} alt="" />
+            <Carrousel pictures={fiche.pictures} />
           </div>
 
           <div className="data-logement">

@@ -150,16 +150,38 @@ a {
 
 .carrousel-logement {
   display: flex;
-}
-
-.carrousel-logement .cover-picture {
-  display: flex;
+  flex-wrap: nowrap;
   text-align: center;
   align-self: center;
   width: 1240px;
   height: 415px;
+  left: 100px;
+  top: 128px;
   border-radius: 25px;
   mix-blend-mode: normal;
+}
+
+.slides {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-back,
+.arrow-forward {
+  position: absolute;
+  left: 92.26%;
+  right: 0%;
+  top: 33.93%;
+  bottom: 37.24%;
+  background-color: #ffffff;
+}
+
+.numbertext {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  width: 24px;
 }
 
 .data-logement {
