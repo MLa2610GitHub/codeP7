@@ -158,22 +158,23 @@ a {
 .container-slideshow {
   position: relative;
   margin: 0;
-  object-fit: cover;
+  width: 1240px;
+  height: 415px;
 }
 
 .slides {
   display: flex;
+  text-align: center;
+  align-self: center;
   height: 100%;
   width: 100%;
   margin: auto;
   overflow: hidden;
-  object-position: center;
   border-radius: 25px;
   mix-blend-mode: normal;
 }
 
 .slides img {
-  display: flex;
   object-fit: cover;
   object-position: center;
 }
@@ -188,7 +189,6 @@ a {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -198,9 +198,13 @@ a {
   right: 0;
 }
 
-.arrow-forward:hover,
-.arrow-back:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.arrow-back svg,
+.arrow-forward svg {
+  height: 79.19999694824219px;
+  width: 46.68000030517578px;
+  left: 25.96002197265625px;
+  top: 8.39990234375px;
+  color: #ffffff;
 }
 
 .numbertext {
@@ -213,7 +217,7 @@ a {
   align-items: center;
   font-size: 18px;
   font-weight: 500;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
 }
 
 .data-logement {

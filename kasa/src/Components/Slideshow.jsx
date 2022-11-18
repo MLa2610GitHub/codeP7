@@ -41,12 +41,12 @@ const Slideshow = ({ pictures }) => {
             </div>
           ))}
 
-          <button className="arrow-back" onClick={prev}>
-            {FaChevronLeft}
-          </button>
-          <button className="arrow-forward" onClick={next}>
-            {FaChevronRight}
-          </button>
+          <div className="arrow-back" onClick={prev}>
+            <FaChevronLeft />
+          </div>
+          <div className="arrow-forward" onClick={next}>
+            <FaChevronRight />
+          </div>
         </div>
       </div>
     </>
