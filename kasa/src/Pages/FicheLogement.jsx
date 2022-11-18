@@ -1,10 +1,10 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Carrousel from '../Components/Carrousel';
 import Dropdown from '../Components/Dropdown';
 import Tags from '../Components/Tags';
 import logements from '../logements.json';
 import '../Styles/index.css';
+import Slideshow from '../Components/Slideshow';
 
 export default function FicheLogement() {
   const params = useLocation();
@@ -15,7 +15,7 @@ export default function FicheLogement() {
       <main>
         <div className="fiche-logement">
           <div className="carrousel-logement">
-            <Carrousel pictures={fiche.pictures} />
+            <Slideshow pictures={fiche.pictures} />
           </div>
 
           <div className="data-logement">

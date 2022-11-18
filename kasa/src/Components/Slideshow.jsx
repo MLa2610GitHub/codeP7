@@ -8,48 +8,45 @@ const Slideshow = ({ pictures }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const next = () => {
-    const pictures = pictures.length;
-    setCurrentSlide((currentSlide + 1) % pictures);
+    const images = pictures.length;
+    setCurrentSlide((currentSlide + 1) % images);
   };
 
   const prev = () => {
-    const pictures = pictures.length;
+    const images = pictures.length;
     let current = currentSlide;
 
     current -= 1;
     if (current < 0) {
-      current = pictures - 1;
+      current = images - 1;
     }
 
     setCurrentSlide(current);
   };
+
   return (
     <>
       <div className="container-slideshow">
-        <div className="arrow-back" onClick={prev}>
-          {FaChevronLeft}
-        </div>
         <div className="slides">
           {pictures.map((picture, index) => (
-            <React.Fragment key={index}>
-              <img src={picture} alt="" />
+            <div
+              className="slides-fade"
+              hidden={currentSlide === index ? false : true}
+            >
               <div className="numbertext">
                 {index + 1} / {pictures.length}
               </div>
 
-              <div className="arrow-forward" onClick={next}>
-                {FaChevronRight}
-              </div>
-            </React.Fragment>
+              <img src={picture} alt="" />
+            </div>
           ))}
-          <div
-            className="changeSlide"
-            onClick={() => setCurrentSlide(!currentSlide)}
-          ></div>
 
-          <div className=" nextSlide">
-            {currentSlide ? <FaChevronRight /> : <FaChevronLeft />}
-          </div>
+          <button className="arrow-back" onClick={prev}>
+            {FaChevronLeft}
+          </button>
+          <button className="arrow-forward" onClick={next}>
+            {FaChevronRight}
+          </button>
         </div>
       </div>
     </>

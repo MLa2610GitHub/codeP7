@@ -150,38 +150,70 @@ a {
 
 .carrousel-logement {
   display: flex;
-  flex-wrap: nowrap;
-  text-align: center;
-  align-self: center;
   width: 1240px;
   height: 415px;
-  left: 100px;
-  top: 128px;
-  border-radius: 25px;
-  mix-blend-mode: normal;
+  margin: 0 auto;
+}
+
+.container-slideshow {
+  position: relative;
+  margin: 0;
+  object-fit: cover;
 }
 
 .slides {
   display: flex;
-  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  object-position: center;
+  border-radius: 25px;
+  mix-blend-mode: normal;
 }
 
-.arrow-back,
-.arrow-forward {
+.slides img {
+  display: flex;
+  object-fit: cover;
+  object-position: center;
+}
+
+.arrow-forward,
+.arrow-back {
   position: absolute;
-  left: 92.26%;
-  right: 0%;
-  top: 33.93%;
-  bottom: 37.24%;
-  background-color: #ffffff;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  z-index: 1;
+}
+.arrow-forward {
+  right: 0;
+}
+
+.arrow-forward:hover,
+.arrow-back:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .numbertext {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  text-align: center;
-  width: 24px;
+  z-index: 1;
+  position: absolute;
+  right: 49.11%;
+  top: 86.19%;
+  bottom: 6.01%;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 .data-logement {
@@ -289,7 +321,6 @@ a {
 
 .dropdown-item-title {
   display: flex;
-
   justify-content: space-between;
   font-size: 18px;
   cursor: pointer;
