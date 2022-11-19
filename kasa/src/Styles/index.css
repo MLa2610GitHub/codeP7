@@ -307,12 +307,7 @@ a {
 
 .rating {
   display: flex;
-  justify-content: flex-end;
-}
-
-.eval-logement {
-  display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   color: #ff6060;
 }
 

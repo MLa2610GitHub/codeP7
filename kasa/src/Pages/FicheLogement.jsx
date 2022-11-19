@@ -5,6 +5,7 @@ import Tags from '../Components/Tags';
 import logements from '../logements.json';
 import '../Styles/index.css';
 import Slideshow from '../Components/Slideshow';
+import Rating from '../Components/Rating';
 
 export default function FicheLogement() {
   const params = useLocation();
@@ -42,8 +43,8 @@ export default function FicheLogement() {
                 </div>
               </div>
 
-              <div className="rating">
-                <span className="eval-logement">{fiche.rating}</span>
+              <div className="rating-logement">
+                <Rating rating={fiche.rating} />
               </div>
             </div>
           </div>

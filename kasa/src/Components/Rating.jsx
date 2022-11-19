@@ -1,21 +1,37 @@
 import React from 'react';
 import '../Styles/index.css';
-import "../logements.json";
+import '../logements.json';
+import { FaRegStar } from 'react-icons/fa';
 
-const Rating = ({rating}) => {
+export const Rating = ({ rating, index }) => {
+  const FilledStar = (
+    <FaRegStar
+      style={{ color: 'rgba(255, 96, 96, 1)' }}
+      className="filled-star"
+    />
+  );
 
-  const stars = [];
-  const star = ( <i className="fa-regular fa-star"></i> );
-   const greyStar = ( <i className="fa-regular fa-star"></i> );
-  
+  const EmptyStar = (
+    <FaRegStar
+      style={{ color: 'rgba(227, 227, 227, 1)' }}
+      className="empty-star"
+    />
+  );
+
+  const ratingValue = [];
+
+  for (let i = 0; i < rating; i++) {
+    ratingValue.push(FilledStar);
+  }
+
+  for (let j = ratingValue.length; j < 5; j++) {
+    ratingValue.push(EmptyStar);
+  }
+
   return (
-<>
-      {stars.map((e, index) => {
-        return 
-        <span key={index}>{e}</span>})
-        }
-    
- </>)
-
-      };
-
+    <div className="rating">
+      <span key={index}>{ratingValue}</span>
+    </div>
+  );
+};
+export default Rating;
