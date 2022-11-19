@@ -1,18 +1,15 @@
 import React from 'react';
 import '../Styles/index.css';
 import '../logements.json';
-import { FaRegStar } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 
 export const Rating = ({ rating, index }) => {
   const FilledStar = (
-    <FaRegStar
-      style={{ color: 'rgba(255, 96, 96, 1)' }}
-      className="filled-star"
-    />
+    <FaStar style={{ color: 'rgba(255, 96, 96, 1)' }} className="filled-star" />
   );
 
   const EmptyStar = (
-    <FaRegStar
+    <FaStar
       style={{ color: 'rgba(227, 227, 227, 1)' }}
       className="empty-star"
     />

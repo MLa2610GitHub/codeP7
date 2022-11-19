@@ -7,7 +7,7 @@ const Header = () => {
     <>
       <header className="header">
         <div className="logo-div">
-          <Logo />
+          <Logo fill="#FF6060" />
         </div>
         <nav className="navbar">
           <NavLink

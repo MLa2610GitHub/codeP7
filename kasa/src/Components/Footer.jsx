@@ -7,16 +7,16 @@ function Footer() {
 
   return (
     <>
-    <footer>
-      <div className="footerContent">
-        <div className="logoDivFooter">
-          <Logo fill="#FFFFFF" />
-        </div>
+      <footer>
+        <div className="footer-content">
+          <div className="logo-footer">
+            <Logo fill="#FFFFFF" />
+          </div>
 
-        <div className="textFooter">
-          <p className="texteFooter">{texteFooter}</p>
+          <div className="text-footer">
+            <p className="texte-footer">{texteFooter}</p>
+          </div>
         </div>
-      </div>
       </footer>
     </>
   );
