@@ -8,16 +8,16 @@ export default function About() {
   return (
     <>
       <section
-        className="section1-about"
+        className="about-banner"
         style={{ backgroundImage: `url(${background})` }}
       ></section>
 
       <section>
-        <div className="dropdown-about">
+        <div className="about-dropdown">
           {textAbout.map((textAbout) => {
             return (
-              <div className="dropdown-item-about">
-                <div className="rectangle-about">
+              <div className="about-dropdown-item">
+                <div className="about-rectangle">
                   <Dropdown
                     title={textAbout.title}
                     description={textAbout.description}

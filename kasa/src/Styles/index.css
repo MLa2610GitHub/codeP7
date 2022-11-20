@@ -67,14 +67,14 @@ a {
   background-image: url(../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 1240px;
+  width: 100%;
   height: 223px;
   border-radius: 25px;
 }
 
 .home-banner img {
   position: relative;
-  width: 1240px;
+  width: 100%;
   height: 223px;
   opacity: 30%;
   mix-blend-mode: darken;
@@ -87,6 +87,7 @@ a {
   height: 223px;
   left: 100px;
   top: 171px;
+  border: solid 1px #f7f7f7;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
@@ -96,16 +97,13 @@ a {
 
 .home-banner-text-bgd {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1240px;
   height: 223px;
 }
 
 .home-banner-text {
-  position: absolute;
-  left: 25.9%;
-  right: 25.14%;
-  top: 24.32%;
-  bottom: 69.04%;
   font-size: 48px;
   color: #ffffff;
   font-weight: 500;
@@ -114,12 +112,16 @@ a {
 
 .gallery {
   display: flex;
+  background: #f7f7f7;
+  border-radius: 25px;
 }
 
 .gallery-card {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  transition: 0.5s all ease-in-out;
+  background: #f7f7f7;
   border-radius: 10px;
 }
 .cover-home-link :hover {
@@ -127,33 +129,43 @@ a {
   border-radius: 10px;
 }
 .cover-home-card {
-  border-radius: 10px;
-  padding: 10px;
+  position: relative;
   height: 340px;
   width: 340px;
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
 
 .cover-home-card-img {
   display: flex;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
 }
 
 .cover-img {
-  width: 340px;
-  height: 340px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
 }
 
 .cover-home-card-title {
-  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .cover-home-card-title h2 {
+  line-height: 142.6%;
+  margin-top: -40px;
   font-size: 18px;
   color: #ffffff;
-  margin-top: -40px;
 }
 
 /* FICHE LOGEMENT */
@@ -171,25 +183,19 @@ a {
 .container-slideshow {
   display: flex;
   position: relative;
-  margin: 0;
-  width: 1240px;
-  height: 415px;
 }
 
 .slides {
-  display: flex;
-  text-align: center;
-  align-self: center;
   height: 415px;
-  margin: auto;
+
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 25px;
   mix-blend-mode: normal;
 }
 
 .slides img {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -259,6 +265,7 @@ a {
 .txt-location-logement {
   color: #ff6060;
   font-size: 18px;
+  margin-top: -25px;
 }
 
 .tagging-logement {
@@ -310,6 +317,12 @@ a {
   justify-content: space-between;
 }
 
+.details-owner p {
+  font-weight: 500;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
 .fiche-logement-host-picture {
   display: flex;
   justify-content: flex-end;
@@ -317,12 +330,15 @@ a {
   height: 64px;
   border-radius: 50%;
   background: #c4c4c4;
+  margin-right: 10px;
 }
 
 .rating {
   display: flex;
   justify-content: space-around;
   color: #ff6060;
+  font-size: 24px;
+  padding-top: 10px;
 }
 
 .dropdown-logement {
@@ -335,14 +351,13 @@ a {
 .dropdown-item-title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 18px;
+  height: 52px;
   cursor: pointer;
   background-color: #ff6060;
   color: #ffffff;
-  left: 3.44%;
-  right: 78.35%;
-  top: 25%;
-  bottom: 25%;
+  border-radius: 10px;
 }
 
 .dropdown-chevron {
@@ -358,6 +373,7 @@ a {
   height: 249px;
   top: 42px;
   color: #ff6060;
+  font-size: 18px;
 }
 
 .dropdown-item-content-equipments {
@@ -367,21 +383,30 @@ a {
   height: 249px;
   top: 42px;
   color: #ff6060;
+  font-size: 18px;
 }
 
 /* PAGE ABOUT */
 
-.section1-about {
+.about-banner {
   display: flex;
   background-image: url(../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.png);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 1240px;
+  width: 100%;
   height: 223px;
-  left: 100px;
+  border-radius: 25px;
 }
 
-.dropdown-about {
+.about-banner img {
+  width: 100%;
+  height: 223px;
+  opacity: 30%;
+  mix-blend-mode: darken;
+  border-radius: 25px;
+}
+
+.about-dropdown {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -389,24 +414,37 @@ a {
   background: #ffffff;
 }
 
-.dropdown-item-about {
+.about-dropdown-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 1023px;
+  height: 170px;
+}
 
-  top: 842px;
-  left: 208px;
-  color: #ff6060;
+.about-rectangle {
+  height: 47px;
+}
+
+.dropdown {
   border-radius: 5px;
 }
 
-.rectangle-about {
-  height: 47px;
-  width: 1023px;
-  left: 0px;
-  top: 0px;
-  border-radius: 5px;
+.dropdown-item-title {
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 142.6%;
+}
+
+.dropdown-chevron {
+  padding-right: 25px;
+}
+
+.dropdown-item-content {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 142.6%;
   color: #ff6060;
 }
 
