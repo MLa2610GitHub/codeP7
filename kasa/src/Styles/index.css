@@ -19,6 +19,9 @@ a {
 .header {
   display: flex;
   justify-content: space-between;
+  width: 1240px;
+  left: 100px;
+  top: 40px;
 }
 
 .logo-div {
@@ -26,6 +29,8 @@ a {
   right: 83.04%;
   top: 0%;
   bottom: 0%;
+  padding-bottom: 20px;
+  margin-top: 10px;
 }
 .logo-div svg {
   width: 210px;
@@ -38,6 +43,8 @@ a {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  padding-bottom: 20px;
+  margin-top: 10px;
 }
 
 .navbar li {
@@ -48,48 +55,61 @@ a {
   color: #ff6060;
 }
 
-.navbar li a:hover {
+.navbar li:hover {
   text-decoration: underline;
-}
-
-.navbar li a {
-  padding-right: 20px;
+  color: #ff6060;
 }
 
 /* HOME PAGE */
 
-.home-section1 {
+.home-banner {
   display: flex;
-  position: relative;
   background-image: url(../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png);
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.home-section1 img {
-  position: absolute;
-  width: 1278px;
-  height: 223px;
-  border-radius: 10px;
-}
-
-.home-section1-text-bgd {
   width: 1240px;
   height: 223px;
-  background: #000000;
-  mix-blend-mode: darken;
-  opacity: 0.3;
   border-radius: 25px;
 }
 
-.home-section1-text {
+.home-banner img {
+  position: relative;
+  width: 1240px;
+  height: 223px;
+  opacity: 30%;
+  mix-blend-mode: darken;
+}
+
+.home-banner-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 25px;
+  width: 1240px;
+  height: 223px;
+  left: 100px;
+  top: 171px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.home-banner-text-bgd {
+  display: flex;
+  width: 1240px;
+  height: 223px;
+}
+
+.home-banner-text {
+  position: absolute;
+  left: 25.9%;
+  right: 25.14%;
+  top: 24.32%;
+  bottom: 69.04%;
   font-size: 48px;
-  line-height: 68.45px;
   color: #ffffff;
-  z-index: -1;
+  font-weight: 500;
+  line-height: 68.45px;
 }
 
 .gallery {
@@ -105,11 +125,6 @@ a {
 .cover-home-link :hover {
   margin-bottom: 15px;
   border-radius: 10px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
 }
 .cover-home-card {
   border-radius: 10px;
@@ -174,7 +189,7 @@ a {
 
 .slides img {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 

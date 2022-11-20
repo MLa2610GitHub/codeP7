@@ -7,11 +7,13 @@ export default function Home() {
   return (
     <>
       <section
-        className="home-section1"
+        className="home-banner"
         style={{ backgroundImage: `url(${background})` }}
       >
-        <div className="home-section1-text-bgd">
-          <p className="home-section1-text">Chez vous, partout et ailleurs</p>
+        <div className="home-banner-content">
+          <div className="home-banner-text-bgd">
+            <p className="home-banner-text">Chez vous, partout et ailleurs</p>
+          </div>
         </div>
       </section>
 
