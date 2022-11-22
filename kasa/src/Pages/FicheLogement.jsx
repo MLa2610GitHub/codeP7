@@ -54,7 +54,12 @@ export default function FicheLogement() {
               <Dropdown title={'Description'} description={fiche.description} />
             </div>
             <div className="dropdown-item-content-equipments ">
-              <Dropdown title={'Equipements'} equipments={fiche.equipments} />
+              <Dropdown
+                title={'Equipements'}
+                equipments={fiche.equipments.map((equipment) => (
+                  <li key={equipment}> {equipment} </li>
+                ))}
+              />
             </div>
           </div>
         </div>

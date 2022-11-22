@@ -386,6 +386,7 @@ a {
   font-size: 18px;
 }
 
+.dropdown-item-content-description li,
 .dropdown-item-content-equipments li {
   list-style-type: none;
 }
@@ -450,6 +451,19 @@ a {
   font-size: 24px;
   line-height: 142.6%;
   color: #ff6060;
+}
+
+.about-dropdown .dropdown li {
+  list-style-type: none;
+}
+
+.about-dropdown .dropdown li {
+  list-style-type: none;
+}
+
+.dropdown-content-description p {
+  color: #ff6060;
+  font-size: 18px;
 }
 
 /* FOOTER */
