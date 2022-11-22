@@ -27,7 +27,7 @@ const Slideshow = ({ pictures }) => {
   return (
     <>
       <div className="container-slideshow">
-        <div className="slides">
+        <div className="slider">
           {pictures.map((picture, index) => (
             <div
               className="slides-fade"
