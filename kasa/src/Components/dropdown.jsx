@@ -3,7 +3,7 @@ import { useState } from 'react';
 import '../Styles/index.css';
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
 
-function Dropdown(props) {
+export default function Dropdown(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -32,5 +32,3 @@ function Dropdown(props) {
     </>
   );
 }
-
-export default Dropdown;
