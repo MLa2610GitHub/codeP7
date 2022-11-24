@@ -7,27 +7,29 @@ import textAbout from '../textAbout.json';
 export default function About() {
   return (
     <>
-      <section
-        className="about-banner"
-        style={{ backgroundImage: `url(${background})` }}
-      ></section>
+      <main className="about-page">
+        <section
+          className="about-banner"
+          style={{ backgroundImage: `url(${background})` }}
+        ></section>
 
-      <section>
-        <div className="about-dropdown">
-          {textAbout.map((textAbout) => {
-            return (
-              <div className="about-dropdown-item">
-                <div className="about-rectangle">
-                  <Dropdown
-                    title={textAbout.title}
-                    description={textAbout.description}
-                  />
+        <section className="about-dropdown-wrapper">
+          <div className="about-dropdown">
+            {textAbout.map((textAbout) => {
+              return (
+                <div className="about-dropdown-item">
+                  <div className="about-rectangle">
+                    <Dropdown
+                      title={textAbout.title}
+                      description={textAbout.description}
+                    />
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+              );
+            })}
+          </div>
+        </section>
+      </main>
     </>
   );
 }

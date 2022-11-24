@@ -67,53 +67,37 @@ a {
   background-image: url(../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 223px;
+  filter: brightness(92%);
   border-radius: 25px;
-}
-
-.home-banner img {
-  position: relative;
-  width: 100%;
-  height: 223px;
-  opacity: 30%;
-  mix-blend-mode: darken;
-}
-
-.home-banner-content {
-  display: flex;
-  border-radius: 25px;
-  width: 1240px;
-  height: 223px;
-  left: 100px;
-  top: 171px;
-  border: solid 1px #f7f7f7;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-}
-
-.home-banner-text-bgd {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 1240px;
   height: 223px;
+  position: relative;
+  border-radius: 25px;
+}
+
+.home-banner img {
+  width: 100%;
 }
 
 .home-banner-text {
+  position: absolute;
   font-size: 48px;
   color: #ffffff;
   font-weight: 500;
-  line-height: 68.45px;
+  line-height: 142.6%;
+  left: 25.9%;
+  right: 25.14%;
+  top: 24.32%;
+  bottom: 69.04%;
 }
 
 .gallery {
   display: flex;
   background: #f7f7f7;
   border-radius: 25px;
+  color: rgba(255, 255, 255, 1);
 }
 
 .gallery-card {
@@ -174,6 +158,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 1240px;
+  color: rgba(255, 255, 255, 1);
 }
 
 .container-slideshow {
@@ -193,6 +178,7 @@ a {
 
 .slider img {
   width: 100%;
+  height: auto;
   max-height: 415px;
   object-fit: cover;
   object-position: center;
@@ -283,7 +269,6 @@ a {
   justify-content: center;
   border-radius: 10px;
   margin-right: 10px;
-
   background: rgba(255, 96, 96, 1);
 }
 
@@ -345,7 +330,7 @@ a {
 .dropdown-logement {
   display: flex;
   justify-content: space-between;
-  background: #f7f7f7;
+
   border-radius: 10px;
 }
 
@@ -395,6 +380,10 @@ a {
 
 /* PAGE ABOUT */
 
+.about-page {
+  color: rgba(255, 255, 255, 1);
+}
+
 .about-banner {
   display: flex;
   background-image: url(../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.png);
@@ -413,12 +402,15 @@ a {
   border-radius: 25px;
 }
 
+.about-dropdown-wrapper {
+  display: flex;
+}
+
 .about-dropdown {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   height: auto;
-  background: #ffffff;
   margin-bottom: 85px;
 }
 
@@ -475,7 +467,6 @@ a {
 
 footer {
   display: flex;
-  top: 4333px;
   width: 1240px;
 }
 
@@ -485,7 +476,7 @@ footer {
   justify-content: center;
   height: 209px;
   width: 1440px;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .logo-footer {
@@ -495,7 +486,7 @@ footer {
   width: 122px;
   height: 39.44px;
   text-align: center;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
 }
 
 .text-footer {
@@ -508,3 +499,160 @@ footer {
   bottom: 13.88%;
   color: #ffffff;
 }
+
+/* ERROR PAGE */
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #e5e5e5;
+}
+
+.error-page-chiffre-404 {
+  font-weight: 700;
+  font-size: 288px;
+  line-height: 142.6%;
+  /* or 411px */
+  color: #ff6060;
+}
+.error-page-p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+  /* identical to box height, or 26px */
+  align-items: flex-end;
+  text-decoration-line: underline;
+  cursor: pointer;
+  color: #ff6060;
+}
+
+/* MEDIA QUERIES */
+/*Small devices (landscape phones, less than 767px)*/
+
+@media screen and (max-width: 767px) {
+  .home-page,
+  .fiche-logement,
+  .about-page,
+  .error-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 47px;
+  }
+
+  .logo-div svg {
+    height: 47px;
+    width: 50%;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 195px;
+    top: 18px;
+  }
+
+  .navbar li {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  footer {
+    width: 375px;
+    height: 209px;
+    background: #000000;
+  }
+
+  /*La taille des polices est agrandie pour une meilleure lisibilité */
+
+  h1 {
+    font-size: 1.3125em; /*21px / 16px */
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.25em; /*20px / 16px */
+  }
+
+  h3 {
+    font-size: 1.125em; /*18px / 16px */
+  }
+
+  p,
+  li {
+    font-size: 1em; /*16px / 16px */
+  }
+
+  /* HOME PAGE */
+
+  .home-banner {
+    display: flex;
+    width: 335px;
+    height: 111px;
+    left: 20px;
+    top: 83px;
+    margin: 20px;
+  }
+  .gallery {
+    display: flex;
+    align-content: center;
+  }
+
+  .gallery-card {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fiche-logement {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    background: #ffffff;
+  }
+
+  .carrousel-logement {
+    width: 335px;
+    height: 255px;
+    left: 20px;
+    top: 94px;
+  }
+
+  .adress-logement {
+    width: 335px;
+    height: 73px;
+    left: 20px;
+    top: 364px;
+  }
+
+  .rating-logement {
+    width: 98px;
+    height: 18px;
+    left: 20px;
+    top: 489px;
+  }
+  .dropdown-item-content-description,
+  .dropdown-item-content-equipments {
+    width: 335px;
+    height: 29.93px;
+    left: calc(50% - 335px / 2);
+    top: calc(50% - 29.93px / 2 + 188.97px);
+  }
+}
+
+/*  ABOUT PAGE */

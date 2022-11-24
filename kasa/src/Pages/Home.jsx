@@ -6,20 +6,18 @@ import '../Styles/index.css';
 export default function Home() {
   return (
     <>
-      <section
-        className="home-banner"
-        style={{ backgroundImage: `url(${background})` }}
-      >
-        <div className="home-banner-content">
-          <div className="home-banner-text-bgd">
-            <p className="home-banner-text">Chez vous, partout et ailleurs</p>
-          </div>
-        </div>
-      </section>
+      <main className="home-page">
+        <section
+          className="home-banner"
+          style={{ backgroundImage: `url(${background})` }}
+        >
+          <h2 className="home-banner-text">Chez vous, partout et ailleurs</h2>
+        </section>
 
-      <section className="gallery">
-        <Card />
-      </section>
+        <section className="gallery">
+          <Card />
+        </section>
+      </main>
     </>
   );
 }
