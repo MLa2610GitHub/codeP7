@@ -17,7 +17,7 @@ export default function Dropdown(props) {
         </div>
 
         {isOpen && (
-          <div>
+          <div className={isOpen ? 'dropdown-isOpen slide' : 'dropdown-isOpen'}>
             <div className="dropdown-content-description">
               <p>{props.description}</p>
             </div>

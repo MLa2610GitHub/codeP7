@@ -14,14 +14,14 @@ const Header = () => {
             to="/"
             className={({ isActive }) => (isActive ? 'link active' : 'link')}
           >
-            <li>Accueil</li>
+            <li className="accueil">Accueil</li>
           </NavLink>
 
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? 'link active' : 'link')}
           >
-            <li>A Propos</li>
+            <li className="about">A Propos</li>
           </NavLink>
         </nav>
       </header>

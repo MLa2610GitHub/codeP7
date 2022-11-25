@@ -1,8 +1,12 @@
+/*Le body a la propriété box-sizing et une hauteur de viewport de 100vh*/
+
 body {
+  box-sizing: border-box;
+  min-height: 100vh;
   margin: 0 auto;
   display: flex;
-  width: 1240px;
-  height: 1095px;
+  max-width: 1240px;
+  max-height: 1095px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
@@ -16,6 +20,7 @@ a {
   cursor: pointer;
 }
 
+/*Le header comprend un logo et une barre de navigation */
 .header {
   display: flex;
   justify-content: space-between;
@@ -24,6 +29,7 @@ a {
   top: 40px;
 }
 
+/*Le logo est au format svg pour ne pas être pixelisé*/
 .logo-div {
   left: 0%;
   right: 83.04%;
@@ -38,6 +44,7 @@ a {
   margin-top: 15px;
 }
 
+/*Navigation*/
 .navbar {
   display: flex;
   flex-direction: row;
@@ -60,7 +67,7 @@ a {
   color: #ff6060;
 }
 
-/* HOME PAGE */
+/* HOME PAGE DESKTOP */
 
 .home-banner {
   display: flex;
@@ -74,13 +81,24 @@ a {
   width: 1240px;
   height: 223px;
   position: relative;
+  z-index: 1;
   border-radius: 25px;
+}
+
+.home-banner-content {
+  position: absolute;
 }
 
 .home-banner img {
   width: 100%;
 }
 
+.home-banner-text-bgd {
+  position: relative;
+  background: #000000;
+  mix-blend-mode: darken;
+  opacity: 0.3;
+}
 .home-banner-text {
   position: absolute;
   font-size: 48px;
@@ -91,8 +109,10 @@ a {
   right: 25.14%;
   top: 24.32%;
   bottom: 69.04%;
+  z-index: 2;
 }
 
+/* Liste des logements disponibles */
 .gallery {
   display: flex;
   background: #f7f7f7;
@@ -152,7 +172,8 @@ a {
   color: #ffffff;
 }
 
-/* FICHE LOGEMENT */
+/* FICHE LOGEMENT DESKTOP */
+/* Une fiche détaillée présente chaque logement */
 
 .fiche-logement {
   display: flex;
@@ -161,6 +182,7 @@ a {
   color: rgba(255, 255, 255, 1);
 }
 
+/* Un carrousel présente une ou plusieurs photos des logements */
 .container-slideshow {
   width: 1240px;
   height: 415px;
@@ -226,6 +248,7 @@ a {
   color: rgba(255, 255, 255, 1);
 }
 
+/* Informations sur la localisation du logement */
 .data-logement {
   display: flex;
   justify-content: space-between;
@@ -284,9 +307,9 @@ a {
   font-size: 14px;
   font-weight: 500;
   line-height: 142.6%;
-  padding: 0 10px;
 }
 
+/* Informations sur le propriétaire du logement */
 .data-owner-logement {
   display: flex;
   justify-content: center;
@@ -327,10 +350,11 @@ a {
   padding-top: 10px;
 }
 
+/* Description du logement et liste des équipements */
+
 .dropdown-logement {
   display: flex;
   justify-content: space-between;
-
   border-radius: 10px;
 }
 
@@ -378,7 +402,8 @@ a {
   list-style-type: none;
 }
 
-/* PAGE ABOUT */
+/* PAGE ABOUT DESKTOP */
+/* Présentation des valeurs de Kasa : fiabilité, respect, service et sécurité */
 
 .about-page {
   color: rgba(255, 255, 255, 1);
@@ -463,7 +488,7 @@ a {
   display: none;
 }
 
-/* FOOTER */
+/* FOOTER DESKTOP */
 
 footer {
   display: flex;
@@ -500,7 +525,8 @@ footer {
   color: #ffffff;
 }
 
-/* ERROR PAGE */
+/* ERROR PAGE DESKTOP */
+/* En cas de problème, une page erreur redirige l'internaute vers la page Accueil */
 .error-page {
   display: flex;
   flex-direction: column;
@@ -528,131 +554,520 @@ footer {
 }
 
 /* MEDIA QUERIES */
+/* Adaptation pour les appareils mobiles */
 /*Small devices (landscape phones, less than 767px)*/
 
 @media screen and (max-width: 767px) {
-  .home-page,
-  .fiche-logement,
-  .about-page,
-  .error-page {
+  /* HOME PAGE MOBILE */
+
+  body {
+    height: 100vh;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  .root {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+  }
+
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-left: 10px;
     background-color: rgba(255, 255, 255, 1);
   }
 
-  header {
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 47px;
+    width: 335px;
+    left: 20px;
+    top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .logo-div {
+    height: 47px;
+    width: 145px;
+    left: 20px;
+    top: 20px;
   }
 
   .logo-div svg {
     height: 47px;
-    width: 50%;
   }
-
   .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    margin-top: 60px;
+    height: 17px;
+    width: 140px;
     left: 195px;
     top: 18px;
   }
-
-  .navbar li {
+  .navbar li.accueil {
+    display: flex;
+    height: 17px;
+    width: 59px;
+    left: 195px;
+    text-transform: uppercase;
     font-family: Montserrat;
     font-size: 12px;
     font-weight: 500;
     line-height: 17px;
-    text-transform: uppercase;
     text-align: right;
   }
 
-  footer {
-    width: 375px;
-    height: 209px;
-    background: #000000;
+  .navbar li.about {
+    display: flex;
+    height: 17px;
+    width: 71px;
+    left: 264px;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    text-align: right;
   }
-
-  /*La taille des polices est agrandie pour une meilleure lisibilité */
-
-  h1 {
-    font-size: 1.3125em; /*21px / 16px */
-    font-weight: bold;
-  }
-
-  h2 {
-    font-size: 1.25em; /*20px / 16px */
-  }
-
-  h3 {
-    font-size: 1.125em; /*18px / 16px */
-  }
-
-  p,
-  li {
-    font-size: 1em; /*16px / 16px */
-  }
-
-  /* HOME PAGE */
-
   .home-banner {
     display: flex;
-    width: 335px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/eric-muhr-P_XxsdVgtpQ-unsplash-mobile.png);
     height: 111px;
+    width: 335px;
+    left: 10px;
+    filter: brightness(82%);
+    position: relative;
+    z-index: 1;
+  }
+
+  .home-banner img {
+    height: 962.1658935546875px;
+    width: 345.2661437988281px;
     left: 20px;
-    top: 83px;
-    margin: 20px;
+    top: -331px;
+  }
+
+  .home-banner-content {
+    position: absolute;
+    display: flex;
+  }
+  .home-banner-text-bgd {
+    display: flex;
+    justify-content: flex-start;
+    height: 48px;
+    width: 217px;
+    left: 36px;
+    top: 114px;
+    background: #000000;
+    mix-blend-mode: darken;
+    opacity: 0.3;
+  }
+  .home-banner-text {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: #ffffff;
+    z-index: 2;
   }
   .gallery {
     display: flex;
-    align-content: center;
   }
 
   .gallery-card {
+    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .cover-home-card {
+    height: 255px;
+    width: 335px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cover-home-card-title h2 {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  /* FOOTER MOBILE */
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 209px;
+    width: 375px;
+  }
+
+  .logo-footer {
+    display: flex;
+    align-self: center;
+    align-items: center;
+
+    width: 122px;
+    left: 127px;
+    top: 62px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .text-footer {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    text-align: center;
+    height: 46px;
+    color: #ffffff;
+  }
+
+  /* FICHE LOGEMENT MOBILE */
+  main {
+    display: flex;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .fiche-logement {
     display: flex;
     flex-direction: column;
-    width: 375px;
-    background: #ffffff;
+
+    background-color: rgba(255, 255, 255, 1);
   }
 
-  .carrousel-logement {
-    width: 335px;
+  .container-slideshow {
+    justify-content: center;
+    text-align: center;
     height: 255px;
-    left: 20px;
-    top: 94px;
+    width: 335px;
+    border-radius: 10px;
   }
 
-  .adress-logement {
+  .slider {
+    justify-content: center;
+    height: 255px;
     width: 335px;
-    height: 73px;
+    border-radius: 10px;
+  }
+
+  .slides-fade {
+    border-radius: 10px;
+    height: 255px;
+    width: 335px;
+  }
+
+  .slider img {
+    height: 255px;
+    width: 100%;
+  }
+
+  .arrow-back svg,
+  .arrow-forward svg {
+    height: 24px;
+    width: 24px;
+  }
+
+  .data-logement {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .adress-logement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .localisation-logement {
+    display: flex;
+    width: 335px;
+  }
+
+  h1 .title-fiche-logement {
+    height: 46px;
+    width: 335px;
     left: 20px;
     top: 364px;
+    font-size: 18px;
+    color: #ff6060;
   }
 
-  .rating-logement {
-    width: 98px;
+  p .txt-location-logement {
+    color: #ff6060;
+    height: 22px;
+    width: 323px;
+    left: 20px;
+    top: 415px;
+    font-size: 14px;
+  }
+
+  .tagging-logement {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tags-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .tags-logement span {
+    justify-content: center;
+    flex-wrap: wrap;
     height: 18px;
+    width: 84px;
+    border-radius: 5px;
+    left: 29.069580078125px;
+    top: 2.1600341796875px;
+  }
+
+  .data-owner-logement {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 370px;
+  }
+
+  .fiche-owner {
+    display: flex;
+  }
+
+  .details-owner p {
+    height: 33px;
+    width: 93px;
+    color: rgba(255, 96, 96, 1);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17.11px;
+    text-align: right;
+  }
+  .fiche-logement-host-picture {
+    display: flex;
+    justify-content: flex-end;
+    height: 32px;
+    width: 32px;
+    left: 103.5px;
+    top: 0.5px;
+    margin-right: 30px;
+    background: rgba(196, 196, 196, 1);
+  }
+
+  .rating {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .rating-logement {
+    display: flex;
+    height: 18px;
+    width: 98px;
     left: 20px;
     top: 489px;
   }
-  .dropdown-item-content-description,
-  .dropdown-item-content-equipments {
+
+  span svg {
+    height: 15px;
+    width: 15px;
+    left: 1.5px;
+    top: 1.5px;
+  }
+
+  .dropdown-logement {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .dropdown-item-title {
+    display: flex;
+    height: 29.931270599365234px;
     width: 335px;
-    height: 29.93px;
-    left: calc(50% - 335px / 2);
-    top: calc(50% - 29.93px / 2 + 188.97px);
+    left: 0px;
+    top: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(255, 96, 96, 1);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 19px;
+    text-align: left;
+  }
+
+  .dropdown-item-content-description {
+    height: 155px;
+    width: 335px;
+    left: 0px;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+  }
+
+  .dropdown-item-content-equipments {
+    height: 143.32472229003906px;
+    width: 335px;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  /*  ABOUT PAGE MOBILE */
+
+  .about-page {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .about-banner {
+    display: flex;
+    background-image: url(../assets/gustavo-alves-YOXSC4zRcxw-unsplash-mobile.png);
+    height: 223px;
+    width: 336px;
+    top: -331px;
+    margin-left: 10px;
+  }
+  .about-banner img {
+    height: 258px;
+    width: 446px;
+  }
+  .about-dropdown-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 425px;
+    width: 335px;
+    left: 21px;
+    top: 216px;
+  }
+  .about-dropdown-item {
+    display: flex;
+    height: auto;
+    width: 335px;
+    left: 20px;
+    top: 614px;
+  }
+  .about-rectangle {
+    height: auto;
+    width: 335px;
+    left: 0px;
+    top: 0px;
+    border-radius: 5px;
+  }
+
+  .dropdown-isOpen {
+    font-size: 12px;
+    opacity: 0;
+    background: #f6f6f6;
+    transition: opacity 0.2s ease-in-out, height 0.1s 0.1s ease-in-out;
+    height: auto;
+    visibility: hidden;
+    border-radius: 10px;
+  }
+
+  .slide {
+    opacity: 1;
+    transition: height 0.2s ease-in-out, opacity 0.1s 0.1s ease-in-out;
+    height: auto;
+    visibility: visible;
+    padding: 13px;
+  }
+
+  .dropdown-content-description p {
+    color: rgba(255, 96, 96, 1);
+    font-size: 12px;
+    font-weight: 400;
+    height: auto;
+    width: 335px;
+    left: 20px;
+    top: 376px;
+  }
+  .dropdown-content-equipments ul {
+    margin-top: -30px;
+  }
+
+  .dropdown-content-equipments p {
+    color: rgba(255, 96, 96, 1);
+    font-size: 12px;
+    font-weight: 400;
+    height: 30px;
+    width: 335px;
+    left: 20px;
+    top: 376px;
+  }
+
+  /*  ERROR PAGE MOBILE */
+
+  .error-page {
+    display: flex;
+    flex-direction: column;
+    height: 812px;
+    width: 375px;
+    left: 947px;
+    top: 2085px;
+    color: rgba(255, 255, 255, 1);
+  }
+  .error-page-chiffre-404 {
+    height: 99px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 136.9%;
+    /* or 411px */
+    color: #ff6060;
+  }
+
+  .error-page-h2 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25.67%;
+    /* identical to box height, or 26px */
+    text-align: center;
+
+    color: #ff6060;
+  }
+
+  .error-page-p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19.96%;
+    /* identical to box height, or 26px */
+    align-items: flex-end;
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: #ff6060;
   }
 }
-
-/*  ABOUT PAGE */

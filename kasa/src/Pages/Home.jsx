@@ -7,11 +7,14 @@ export default function Home() {
   return (
     <>
       <main className="home-page">
-        <section
-          className="home-banner"
-          style={{ backgroundImage: `url(${background})` }}
-        >
-          <h2 className="home-banner-text">Chez vous, partout et ailleurs</h2>
+        <section className="home-banner">
+          <div
+            className="home-banner-content"
+            style={{ backgroundImage: `url(${background})` }}
+          ></div>
+          <div lassName="home-banner-text-bgd">
+            <h2 className="home-banner-text">Chez vous, partout et ailleurs</h2>
+          </div>
         </section>
 
         <section className="gallery">
