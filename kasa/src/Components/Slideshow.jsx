@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import arrowForward from '../assets/arrow-forward.svg';
+import arrowBackward from '../assets/arrow-backward.svg';
 import '../logements.json';
 import '../Styles/index.css';
 
@@ -44,10 +45,10 @@ export default function Slideshow({ pictures }) {
             ))}
 
             <div className="arrow-back" onClick={prev}>
-              <FaChevronLeft />
+              <img src={arrowBackward} alt="" />
             </div>
             <div className="arrow-forward" onClick={next}>
-              <FaChevronRight />
+              <img src={arrowForward} alt="" />
             </div>
           </div>
         </div>

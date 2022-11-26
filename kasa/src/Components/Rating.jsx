@@ -1,37 +1,36 @@
 import React from 'react';
 import '../Styles/index.css';
 import '../logements.json';
-import { FaStar } from 'react-icons/fa';
+import filledStar from '../assets/filledStar.svg';
+import emptyStar from '../assets/emptyStar.svg';
 
-export default function Rating({ rating, index }) {
-  const FilledStar = (
-    <FaStar
-      key={index}
-      style={{ color: 'rgba(255, 96, 96, 1)' }}
-      className="filled-star"
-    />
-  );
-
-  const EmptyStar = (
-    <FaStar
-      key={index}
-      style={{ color: 'rgba(227, 227, 227, 1)' }}
-      className="empty-star"
-    />
-  );
-
+export default function Rating({ rating }) {
   const ratingValue = [];
 
   for (let i = 0; i < rating; i++) {
-    ratingValue.push(FilledStar, index);
+    ratingValue.push(
+      <img
+        key={'filledStar' + i}
+        className="filledStarRating"
+        src={filledStar}
+        alt="filled star"
+      />
+    );
   }
 
   for (let j = ratingValue.length; j < 5; j++) {
-    ratingValue.push(EmptyStar, index);
+    ratingValue.push(
+      <img
+        key={'emptyStar' + j}
+        className="emptyStarRating"
+        src={emptyStar}
+        alt="empty star"
+      />
+    );
 
     return (
       <div className="rating">
-        <span key={`${rating}-${index}`}>{ratingValue}</span>
+        <span key={rating}>{ratingValue}</span>
       </div>
     );
   }
