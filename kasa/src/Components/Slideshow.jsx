@@ -32,6 +32,7 @@ export default function Slideshow({ pictures }) {
             {pictures.map((picture, index) => (
               <div
                 className="slides-fade"
+                key={index}
                 hidden={currentSlide === index ? false : true}
               >
                 <div className="numbertext">

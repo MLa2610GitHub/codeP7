@@ -12,7 +12,7 @@ export default function Home() {
             className="home-banner-content"
             style={{ backgroundImage: `url(${background})` }}
           ></div>
-          <div lassName="home-banner-text-bgd">
+          <div className="home-banner-text-bgd">
             <h2 className="home-banner-text">Chez vous, partout et ailleurs</h2>
           </div>
         </section>

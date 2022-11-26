@@ -15,9 +15,9 @@ export default function About() {
 
         <section className="about-dropdown-wrapper">
           <div className="about-dropdown">
-            {textAbout.map((textAbout) => {
+            {textAbout.map((textAbout, index) => {
               return (
-                <div className="about-dropdown-item">
+                <div className="about-dropdown-item" key={index}>
                   <div className="about-rectangle">
                     <Dropdown
                       title={textAbout.title}
