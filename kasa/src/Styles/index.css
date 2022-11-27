@@ -404,18 +404,17 @@ img.filledStarRating {
   background-color: rgba(255, 96, 96, 1);
   color: #ffffff;
   border-radius: 10px;
+  padding-right: 15px;
 }
 
 .chevronUp {
   width: 20px;
   transform: rotate(0deg);
-  margin-right: 10px;
 }
 
 .chevronDown {
   width: 20px;
   transform: rotate(180deg);
-  margin-right: 10px;
 }
 
 .dropdown-item-content-description {
