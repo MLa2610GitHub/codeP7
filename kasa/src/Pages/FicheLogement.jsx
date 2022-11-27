@@ -7,6 +7,10 @@ import '../Styles/index.css';
 import Slideshow from '../Components/Slideshow';
 import Rating from '../Components/Rating';
 
+/*Le hook useLocation renvoie l'objet de localisation qui représente l'URL actuelle */
+/*Params permet de récupérer les paramètres passés dans l'URL */
+/*L'id permet de cibler les logements avec précision */
+
 export default function FicheLogement() {
   const params = useLocation();
   const fiche = logements.find((fiche) => fiche.id === params?.state?.id);

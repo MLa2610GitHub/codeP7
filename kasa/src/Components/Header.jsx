@@ -2,6 +2,10 @@ import { NavLink } from 'react-router-dom';
 import Logo from '../Components/Logo';
 import '../Styles/index.css';
 
+/* Le composant NavLink vient de React Router */
+/* Il se comporte comme une balise anchor et crée des liens vers les différentes pages  */
+/* Il permet aussi d'ajouter des styles aux liens */
+
 const Header = () => {
   return (
     <>

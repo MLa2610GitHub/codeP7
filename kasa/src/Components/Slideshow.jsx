@@ -5,6 +5,9 @@ import arrowBackward from '../assets/arrow-backward.svg';
 import '../logements.json';
 import '../Styles/index.css';
 
+/*Un carrousel présente une ou plusieurs photos de chaque logement */
+/*Utilisation du hook useState pour faire défiler les photos */
+
 export default function Slideshow({ pictures }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -13,7 +16,7 @@ export default function Slideshow({ pictures }) {
     setCurrentSlide((currentSlide + 1) % images);
   };
 
-  const prev = () => {
+  function prev() {
     const images = pictures.length;
     let current = currentSlide;
 
@@ -23,7 +26,7 @@ export default function Slideshow({ pictures }) {
     }
 
     setCurrentSlide(current);
-  };
+  }
 
   if (pictures.length > 1) {
     return (
@@ -72,8 +75,8 @@ export default function Slideshow({ pictures }) {
               </div>
             ))}
 
-            <div className="arrow-back" FaChevronLeft={false}></div>
-            <div className="arrow-forward" FaChevronRight={false}></div>
+            <div className="arrow-back" arrow-backward="false"></div>
+            <div className="arrow-forward" arrow-forward="false"></div>
           </div>
         </div>
       </>
