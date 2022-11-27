@@ -73,36 +73,39 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 1240px;
+  height: 223px;
+  border-radius: 25px;
+  background-color: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  filter: brightness(92%);
+}
+
+.home-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-image: url(../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png);
   background-size: cover;
   background-repeat: no-repeat;
-  filter: brightness(92%);
+  z-index: -2;
   border-radius: 25px;
-  width: 1240px;
-  height: 223px;
-  z-index: 1;
-  border-radius: 25px;
-}
-
-.home-banner-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-banner img {
-  width: 100%;
-}
-
-.home-banner-text-bgd {
-  width: 1240px;
-  height: 223px;
-  position: relative;
   background: #000000;
   mix-blend-mode: darken;
   opacity: 0.3;
-  border-radius: 25px;
 }
+
+.home-banner .backgroundImage {
+  width: 100%;
+}
+
 .home-banner-text {
   position: absolute;
   font-size: 48px;
@@ -113,7 +116,6 @@ a {
   right: 25.14%;
   top: 24.32%;
   bottom: 69.04%;
-  z-index: 2;
 }
 
 /* Liste des logements disponibles */
@@ -142,7 +144,7 @@ a {
   width: 340px;
   padding: 10px;
   border-radius: 10px;
-  background: linear-gradient(
+  background-color: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
     rgba(0, 0, 0, 0.5) 100%
@@ -162,11 +164,21 @@ a {
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
+  background-color: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
 
 .cover-home-card-title {
   display: flex;
   align-items: flex-end;
+  background-color: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
 
 .cover-home-card-title h2 {
@@ -174,6 +186,7 @@ a {
   margin-top: -40px;
   font-size: 18px;
   color: #ffffff;
+  z-index: 1;
 }
 
 /* FICHE LOGEMENT DESKTOP */
@@ -212,7 +225,7 @@ a {
 }
 
 .arrow-forward,
-.arrow-back {
+.arrow-backward {
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -230,12 +243,11 @@ a {
   right: 0;
 }
 
-.arrow-back svg,
+.arrow-backward svg,
 .arrow-forward svg {
   height: 79.19999694824219px;
   width: 46.68000030517578px;
   left: 25.96002197265625px;
-
   color: #ffffff;
 }
 
@@ -346,16 +358,22 @@ a {
   margin-right: 10px;
 }
 
-.rating-logement {
+.rating span {
   display: flex;
-  justify-content: space-around;
-  color: #ff6060;
   font-size: 24px;
   padding-top: 10px;
   height: 36px;
   width: 196px;
   left: 1144px;
   top: 652px;
+}
+
+img.emptyStarRating {
+  color: rgba(227, 227, 227, 1);
+}
+
+img.filledStarRating {
+  color: rgba(255, 96, 96, 1);
 }
 
 .tags-logement span {
@@ -391,11 +409,13 @@ a {
 .chevronUp {
   width: 20px;
   transform: rotate(0deg);
+  margin-right: 10px;
 }
 
 .chevronDown {
   width: 20px;
   transform: rotate(180deg);
+  margin-right: 10px;
 }
 
 .dropdown-item-content-description {
@@ -582,21 +602,20 @@ footer {
   /* HOME PAGE MOBILE */
 
   body {
-    height: 100vh;
+    box-sizing: border-box;
+    min-height: 100vh;
     overflow-x: hidden;
-    padding: 0;
-    margin: 0;
-  }
-  .root {
-    display: flex;
-    flex-direction: column;
   }
 
-  .home-page {
+  home-page {
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
-    margin-left: 10px;
+    justify-content: center;
+    text-align: center;
+    max-width: 375px;
+    height: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
     background-color: rgba(255, 255, 255, 1);
   }
 
@@ -655,46 +674,32 @@ footer {
     line-height: 17px;
     text-align: right;
   }
+
   .home-banner {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../assets/eric-muhr-P_XxsdVgtpQ-unsplash-mobile.png);
-    height: 111px;
-    width: 335px;
-    left: 10px;
-
-    z-index: 1;
-    filter: brightness(92%);
-  }
-
-  .home-banner img {
-    height: 962.1658935546875px;
-    width: 345.2661437988281px;
-    left: 20px;
-    top: -331px;
-  }
-
-  .home-banner-content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .home-banner-text-bgd {
-    display: flex;
-    height: 111px;
-    width: 335px;
+    flex-direction: column;
     position: relative;
+    width: 335px;
+    height: 111px;
+    margin-left: 10px;
   }
+
+  .home-banner::after {
+    position: absolute;
+    width: 335px;
+    height: 111px;
+  }
+
   .home-banner-text {
-    display: flex;
-    align-items: flex-start;
+    left: calc(50% - 320px / 2);
+    top: calc(50% - 70px / 2);
+    position: absolute;
+    width: 335px;
+    height: 111px;
     font-size: 24px;
-    font-weight: 500;
     line-height: 24px;
-    color: #ffffff;
-    z-index: 2;
   }
+
   .gallery {
     display: flex;
   }
@@ -704,7 +709,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
   }
 
   .cover-home-card {
@@ -729,6 +733,7 @@ footer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    position: relative;
   }
 
   .footer-content {
@@ -743,7 +748,6 @@ footer {
     display: flex;
     align-self: center;
     align-items: center;
-
     width: 122px;
     left: 127px;
     top: 62px;
@@ -762,17 +766,14 @@ footer {
   }
 
   /* FICHE LOGEMENT MOBILE */
-  main {
-    display: flex;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
 
   .fiche-logement {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
     background-color: rgba(255, 255, 255, 1);
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .container-slideshow {
@@ -801,10 +802,10 @@ footer {
     width: 100%;
   }
 
-  .arrow-back svg,
-  .arrow-forward svg {
-    height: 24px;
-    width: 24px;
+  .arrow-backward img,
+  .arrow-forward img {
+    height: 19.799999237060547px;
+    width: 11.670000076293945px;
   }
 
   .data-logement {
@@ -823,7 +824,7 @@ footer {
     width: 335px;
   }
 
-  h1 .title-fiche-logement {
+  .title-fiche-logement h1 {
     height: 46px;
     width: 335px;
     left: 20px;
@@ -832,7 +833,7 @@ footer {
     color: #ff6060;
   }
 
-  p .txt-location-logement {
+  .txt-location-logement p {
     color: #ff6060;
     height: 22px;
     width: 323px;
@@ -899,19 +900,17 @@ footer {
   }
   .rating-logement {
     display: flex;
-    height: 18px;
-    width: 98px;
-    left: 20px;
-    top: 489px;
   }
 
-  img.filledStarRating,
-  img.emptyStarRating {
-    height: 15px;
+  .rating span {
     width: 15px;
-    left: 1.5px;
-    top: 1.5px;
-    color: rgba(255, 96, 96, 1);
+    height: 15px;
+  }
+
+  .filledStarRating img,
+  .emptyStarRating img {
+    width: 15px;
+    height: 15px;
   }
 
   .dropdown-logement {
@@ -960,12 +959,20 @@ footer {
 
   /*  ABOUT PAGE MOBILE */
 
+  body {
+    height: 100vh;
+    overflow-x: hidden;
+    padding: 0;
+  }
+
   .about-page {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
     background-color: rgba(255, 255, 255, 1);
-    margin-right: 10px;
-    margin-left: 10px;
   }
 
   .about-banner {
@@ -974,7 +981,6 @@ footer {
     height: 223px;
     width: 336px;
     top: -331px;
-    margin-left: 10px;
   }
   .about-banner img {
     height: 258px;
@@ -1054,11 +1060,16 @@ footer {
   .error-page {
     display: flex;
     flex-direction: column;
-    height: 812px;
-    width: 375px;
-    left: 947px;
-    top: 2085px;
-    color: rgba(255, 255, 255, 1);
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .error-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
   .error-page-chiffre-404 {
     height: 99px;
@@ -1076,7 +1087,6 @@ footer {
     line-height: 25.67%;
     /* identical to box height, or 26px */
     text-align: center;
-
     color: #ff6060;
   }
 

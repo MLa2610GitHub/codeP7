@@ -13,54 +13,52 @@ export default function FicheLogement() {
 
   return (
     <>
-      <main>
-        <div className="fiche-logement">
-          <div className="carrousel-logement">
-            <Slideshow pictures={fiche.pictures} />
-          </div>
+      <main className="fiche-logement">
+        <div className="carrousel-logement">
+          <Slideshow pictures={fiche.pictures} />
+        </div>
 
-          <div className="data-logement">
-            <div className="adress-logement">
-              <div className="localisation-logement">
-                <h1 className="title-fiche-logement">{fiche?.title}</h1>
-                <p className="txt-location-logement">{fiche.location}</p>
-              </div>
-
-              <div className="tagging-logement">
-                <Tags tags={fiche.tags} />
-              </div>
+        <div className="data-logement">
+          <div className="adress-logement">
+            <div className="localisation-logement">
+              <h1 className="title-fiche-logement">{fiche?.title}</h1>
+              <p className="txt-location-logement">{fiche.location}</p>
             </div>
 
-            <div className="data-owner-logement">
-              <div className="fiche-owner">
-                <div className="details-owner">
-                  <p>{fiche.host.name}</p>
-                  <img
-                    src={fiche.host.picture}
-                    alt=""
-                    className="fiche-logement-host-picture"
-                  />
-                </div>
-              </div>
-
-              <div className="rating-logement">
-                <Rating rating={fiche.rating} />
-              </div>
+            <div className="tagging-logement">
+              <Tags tags={fiche.tags} />
             </div>
           </div>
 
-          <div className="dropdown-logement">
-            <div className="dropdown-item-content-description">
-              <Dropdown title={'Description'} description={fiche.description} />
+          <div className="data-owner-logement">
+            <div className="fiche-owner">
+              <div className="details-owner">
+                <p>{fiche.host.name}</p>
+                <img
+                  src={fiche.host.picture}
+                  alt=""
+                  className="fiche-logement-host-picture"
+                />
+              </div>
             </div>
-            <div className="dropdown-item-content-equipments ">
-              <Dropdown
-                title={'Equipements'}
-                description={fiche.equipments.map((equipment) => (
-                  <li key={equipment}> {equipment} </li>
-                ))}
-              />
+
+            <div className="rating-logement">
+              <Rating rating={fiche.rating} />
             </div>
+          </div>
+        </div>
+
+        <div className="dropdown-logement">
+          <div className="dropdown-item-content-description">
+            <Dropdown title={'Description'} description={fiche.description} />
+          </div>
+          <div className="dropdown-item-content-equipments ">
+            <Dropdown
+              title={'Equipements'}
+              description={fiche.equipments.map((equipment) => (
+                <li key={equipment}> {equipment} </li>
+              ))}
+            />
           </div>
         </div>
       </main>

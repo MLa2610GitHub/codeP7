@@ -44,7 +44,7 @@ export default function Slideshow({ pictures }) {
               </div>
             ))}
 
-            <div className="arrow-back" onClick={prev}>
+            <div className="arrow-backward" onClick={prev}>
               <img src={arrowBackward} alt="" />
             </div>
             <div className="arrow-forward" onClick={next}>
