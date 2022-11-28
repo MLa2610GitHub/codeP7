@@ -13,23 +13,23 @@ export default function Card() {
   return (
     <>
       <div className="gallery-card">
-        {logements.map((fiche) => {
-          const title = fiche.title;
+        {logements.map((logement) => {
+          const id = logement.id;
 
           return (
             <Link
               className="cover-home-link"
-              key={fiche.id}
-              to={`/fiche/${title} `}
-              state={{ id: fiche.id }}
+              key={logement.id}
+              to={`/logement/${id} `}
+              state={{ id: logement.id }}
             >
               <div className="cover-home-card">
                 <div className="cover-home-card-img">
-                  <img src={fiche.cover} alt="" className="cover-img" />
+                  <img src={logement.cover} alt="" className="cover-img" />
                 </div>
 
                 <div className="cover-home-card-title">
-                  <h2> {fiche.title} </h2>
+                  <h2> {logement.title} </h2>
                 </div>
               </div>
             </Link>
