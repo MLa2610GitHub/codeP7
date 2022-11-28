@@ -10,14 +10,14 @@ import '../src/Styles/index.css';
 //BrowserRouter est placé à la racine de l'arborescence
 //Il englobe toutes les routes qu'on a définies
 /*Les composants Header et Footer sont intégrés dans le layout de l'app */
-//Navigation dynamique vers chaque logement disponible grâce à /fiche/:title
+//Navigation dynamique vers chaque logement disponible grâce à /logement/:id
 export default function AppRouter() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/fiche/:title" element={<FicheLogement />} />
+        <Route path="/logement/:id" element={<FicheLogement />} />
         <Route path="about" element={<About />} />
 
         <Route path="*" element={<ErrorPage />} />
